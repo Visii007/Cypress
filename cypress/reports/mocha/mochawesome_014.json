@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-01T05:41:23.655Z",
+    "end": "2023-11-01T05:41:38.189Z",
+    "duration": 14534,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0c8bddbd-c999-4a28-afbb-a9567dcdd305",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\Test2.js",
+      "file": "cypress\\integration\\examples\\Test2.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "35a7243e-934b-44f3-9cce-37eaa9f08935",
+          "title": "My Second Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "My FirstTest case",
+              "fullTitle": "My Second Test Suite My FirstTest case",
+              "timedOut": null,
+              "duration": 7594,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://rahulshettyacademy.com/seleniumPractise/#/\");\ncy.get('.search-keyword').type('ca');\ncy.wait(2000);\n//selenium get hit url in browser, cypress get acts like findElement of selenium\n//Parent child chaining\ncy.get('.products').as('productLocator');\ncy.get('@productLocator').find('.product').each(function ($el, index, $list) {\n  var textVeg = $el.find('h4.product-name').text();\n  if (textVeg.includes('Cashews')) {\n    cy.wrap($el).find('button').click();\n  }\n});\ncy.get('.cart-icon > img').click();\n//cy.contains('PROCEED TO CHECKOUT').click()\ncy.visit(\"https://rahulshettyacademy.com/seleniumPractise/#/cart\");\ncy.contains('Place Order').click();\n//fixture",
+              "err": {},
+              "uuid": "cdb7abeb-19bc-43b5-812e-35bec9653243",
+              "parentUUID": "35a7243e-934b-44f3-9cce-37eaa9f08935",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cdb7abeb-19bc-43b5-812e-35bec9653243"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7594,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
